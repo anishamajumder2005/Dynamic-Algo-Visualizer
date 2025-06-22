@@ -110,6 +110,43 @@ async function quickSort() {
   renderArray();
 }
 
+async function mergeSortHelper(l, r) {
+  if (l >= r) return;
+  const m = Math.floor((l + r) / 2);
+  await mergeSortHelper(l, m);
+  await mergeSortHelper(m + 1, r);
+  await merge(l, m, r);
+}
+
+async function merge(l, m, r) {
+  let left = arr.slice(l, m + 1);
+  let right = arr.slice(m + 1, r + 1);
+  let i = 0, j = 0, k = l;
+  while (i < left.length && j < right.length) {
+    arr[k] = (left[i] <= right[j]) ? left[i++] : right[j++];
+    renderArray([k]);
+    await sleep();
+    k++;
+  }
+  while (i < left.length) {
+    arr[k] = left[i++];
+    renderArray([k]);
+    await sleep();
+    k++;
+  }
+  while (j < right.length) {
+    arr[k] = right[j++];
+    renderArray([k]);
+    await sleep();
+    k++;
+  }
+}
+
+async function mergeSort() {
+  await mergeSortHelper(0, arr.length - 1);
+  renderArray();
+}
+
 function sleep() {
   return new Promise(res => setTimeout(res, 101 - speed));
 }
@@ -121,7 +158,9 @@ visualizeBtn.onclick = async function() {
     case 'bubble': await bubbleSort(); break;
     case 'selection': await selectionSort(); break;
     case 'insertion': await insertionSort(); break;
+    case 'merge': await mergeSort(); break;
     case 'quick': await quickSort(); break;
+    
   }
   sorting = false;
 };
