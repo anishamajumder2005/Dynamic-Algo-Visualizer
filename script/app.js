@@ -25,7 +25,7 @@ document.querySelector("#bidirectional-dijkstra").addEventListener("click",() =>
 document.querySelector("#greedybest").addEventListener("click",() => makeChoice("Greedy Best First"));
 document.querySelector("#path-finder").addEventListener("click",pathFinderTab);
 document.querySelector("#minimum-spanning-tree").addEventListener("click",minimumSpanningTab);
-document.querySelector("#topological-sort").addEventListener("click",topologicalSortTab);
+document.querySelector("#sorting-algo-tab-btn").addEventListener("click", sortingAlgoTab);
 let status = 0;
 let running = "";
 let runningMessage = "";
@@ -33,6 +33,11 @@ const height = window.innerHeight|| document.documentElement.clientHeight||
 document.body.clientHeight;
 const width = window.innerWdith || document.documentElement.clientWidth ||
 document.body.clientWidth;
+
+function sortingAlgoTab() {
+  clearToasts();
+  // Optionally, show a toast or do setup for the sorting tab
+}
 
 function generateMaze(choice){
   document.querySelector("#visualize").textContent = `Visualize`
@@ -481,9 +486,9 @@ function clearToasts(){
   let shortcutToast = new mdb.Toast(shortcutToastTriggerEl)
   // let primToastTriggerEl = document.getElementById('prim-toast')
   // let primToast = new mdb.Toast(primToastTriggerEl)
-  let kahnToastTriggerEl = document.getElementById('fail-kahn-toast')
-  let kahnToast = new mdb.Toast(kahnToastTriggerEl)
-  kahnToast.hide()
+  // let kahnToastTriggerEl = document.getElementById('fail-kahn-toast')
+  // let kahnToast = new mdb.Toast(kahnToastTriggerEl)
+  // kahnToast.hide()
   // primToast.hide()
   failToast.hide()
   infoToast.hide()
