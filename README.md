@@ -1,4 +1,4 @@
-# Graph Algorithms Visualizer
+# Dynamic Algorithms Visualizer
 ---
 Dynamic Algorithms visualizer project 
 - Path-finding algorithms 
