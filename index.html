@@ -437,12 +437,33 @@
         <option value="quick">Quick Sort</option>
       </select>
     </div>
+    <div class="form-check form-switch d-flex align-items-center" style="margin-bottom:0;">
+      <input class="form-check-input" type="checkbox" id="duo-switch">
+      <label class="form-check-label mb-0 ml-2" for="duo-switch">Duo</label>
+    </div>
+    <div id="duo-algo-div" style="display:none;">
+      <label for="duo-algo-select" class="form-label mb-0">Algorithm 2</label>
+      <select id="duo-algo-select" class="form-select">
+        <option value="bubble">Bubble Sort</option>
+        <option value="selection">Selection Sort</option>
+        <option value="insertion">Insertion Sort</option>
+        <option value="merge">Merge Sort</option>
+        <option value="quick">Quick Sort</option>
+      </select>
+    </div>
     <button id="sort-visualize" class="btn btn-warning">Visualize</button>
   </div>
-  <div id="sorting-array" style="height:250px; display:flex; align-items:flex-end; gap:2px; background:#fff;">
-    <!-- Bars will be rendered here -->
+  <div id="sorting-visualizer-graphs" style="display:flex; flex-direction:column; align-items:center; gap:10px; width:100%;">
+  <div id="algo-labels" style="display:none; width:90vw; max-width:1200px; margin:0 auto; justify-content:center; align-items:center;">
+    <span id="algo-label-1" style="font-weight:bold; text-align:center; width:100%"></span>
   </div>
-</section>
+  <div id="sorting-array"></div>
+  <div id="duo-divider" style="display:none; width:90vw; max-width:1200px; height:2px; background:#bbb; margin:10px 0;"></div>
+  <div id="algo-labels-2" style="display:none; width:90vw; max-width:1200px; margin:0 auto; justify-content:center; align-items:center;">
+    <span id="algo-label-2" style="font-weight:bold; text-align:center; width:100%"></span>
+  </div>
+  <div id="sorting-array-duo"></div>
+</div>
             </main>
           </div>
         </div>
