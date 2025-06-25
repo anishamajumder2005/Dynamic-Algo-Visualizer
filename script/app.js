@@ -18,11 +18,7 @@ document.querySelector("#dfs").addEventListener("click",() => makeChoice("DFS"))
 document.querySelector("#bfs").addEventListener("click",() => makeChoice("BFS"));
 document.querySelector("#dijkstra").addEventListener("click",() => makeChoice("Dijkstra (UCS)"));
 document.querySelector("#astar").addEventListener("click",() => makeChoice("A*"));
-document.querySelector("#bidirectional-astar").addEventListener("click",() => makeChoice("Bidirectional A*"));
 document.querySelector("#bidirectional-bfs").addEventListener("click",() => makeChoice("Bidirectional BFS"));
-document.querySelector("#bidirectional-greedy-bfs").addEventListener("click",() => makeChoice("Bidirectional Greedy Best First"));
-document.querySelector("#bidirectional-dijkstra").addEventListener("click",() => makeChoice("Bidirectional Dijkstra (UCS)"));
-document.querySelector("#greedybest").addEventListener("click",() => makeChoice("Greedy Best First"));
 document.querySelector("#path-finder").addEventListener("click",pathFinderTab);
 document.querySelector("#minimum-spanning-tree").addEventListener("click",minimumSpanningTab);
 document.querySelector("#sorting-algo-tab-btn").addEventListener("click", sortingAlgoTab);
